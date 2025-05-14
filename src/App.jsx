@@ -5,7 +5,7 @@ function App() {
   const[movies,setMovies] = useState([])
   const[loading,setLoading]= useState(true)
 
-const API_URL = "http://www.omdbapi.com/?apikey=";
+const API_URL = "http://www.omdbapi.com/?apikey={---}";
 
 async function searchMovie(title) {
   setLoading(true);
@@ -55,7 +55,7 @@ function MovieCard({data}){
 
   useEffect(()=>{
       async function fetchDetails(){
-      const response = await fetch(`http://www.omdbapi.com/?apikey=28437600&i=${data.imdbID}`)
+      const response = await fetch(`http://www.omdbapi.com/?apikey={----}&i=${data.imdbID}`)
       const detailedData = await response.json()
       setDetails(detailedData)
       }
