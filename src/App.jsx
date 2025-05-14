@@ -5,7 +5,7 @@ function App() {
   const[movies,setMovies] = useState([])
   const[loading,setLoading]= useState(true)
 
-const API_URL = "http://www.omdbapi.com/?apikey=28437600";
+const API_URL = "http://www.omdbapi.com/?apikey=";
 
 async function searchMovie(title) {
   setLoading(true);
